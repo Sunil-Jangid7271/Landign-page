@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Digital Marketing Hero</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  
+    <header class="landing-header">
+    <div class="container">
+      <div class="landing-nav">
+        <div class="menu-wrap" id="menuWrap">
+          <button class="menu-btn" id="menuBtn" type="button">
+            <span class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+
+          <div class="menu-dropdown" id="menuDropdown">
+            <a href="#problem">Problem</a>
+            <a href="#idea">Big Idea</a>
+            <a href="#system">System</a>
+            <a href="#curriculum">Curriculum</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+
+        <a href="#" class="landing-logo">
+          Vande <span>Digital</span>
+        </a>
+
+        <a href="#join" class="landing-cta">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    const menuWrap = document.getElementById("menuWrap");
+    const menuBtn = document.getElementById("menuBtn");
+
+    menuBtn.addEventListener("click", function () {
+      menuWrap.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!menuWrap.contains(e.target)) {
+        menuWrap.classList.remove("active");
+      }
+    });
+  </script>
+  <div class="body1">
+  <section class="hero">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+
+    <div class="container hero-content">
+      <div class="hero-panel">
+        <!-- <span class="eyebrow">Premium Digital Marketing Learning System</span> -->
+
+        <h1>
+          <span class="line">Learn Digital Marketing</span>
+          <span class="line">With Strategy That</span>
+          <span class="typing-wrap">
+            <span id="typed-text"></span><span class="cursor">|</span>
+          </span>
+        </h1>
+
+        <!-- <p>
+          A premium, conversion-focused learning experience for creators, founders, and marketers
+          who want more than tutorials. Build real strategy, understand buyer psychology, and execute
+          campaigns that feel modern, sharp, and profitable.
+        </p> -->
+
+        <div class="btns">
+          <a href="#videoSection" class="btn1 btn-primary"><span>Start Learning Now</span></a>
+          <a href="#videoSection" class="btn1 btn-secondary" id="watchBtn"><span>Watch The Experience</span></a>
+        </div>
+      </div>
+    </div>
+
+    
+ 
+  </section>
+
+  <div class="promo-card" id="promoCard">
+    <button class="promo-close" id="promoClose">&times;</button>
+    <div class="promo-image">
+      <img src="img1.jpg" alt="Digital Marketing">
+    </div>
+    <div class="promo-content">
+      <h3>Digital Marketing</h3>
+      <p>
+        Learn ads, content, funnels and strategy with a practical premium course.
+      </p>
+      <a href="#buy" class="promo-btn">Buy Now</a>
+    </div>
+  </div>
+  <script>
+    const promoCard = document.getElementById("promoCard");
+    const promoClose = document.getElementById("promoClose");
+
+    setTimeout(() => {
+      promoCard.classList.add("show");
+    }, 5000);
+
+    promoClose.addEventListener("click", () => {
+      promoCard.classList.remove("show");
+    });
+  </script>
+
+  <!-- CTA -->
+     <div class="sticky-offer" id="stickyOffer">
+    <div class="sticky-offer-content">
+      <div class="sticky-offer-left">
+        <span class="offer-dot"></span>
+
+        <div class="offer-text">
+          <span class="offer-badge">Limited Offer</span>
+          <div class="offer-title">Digital Marketing Course</div>
+          <div class="offer-sub">Get full premium access today for just Rs 999</div>
+        </div>
+      </div>
+
+      <div class="sticky-offer-right">
+        <div class="price-block">
+          <span class="old-price">Rs 2999</span>
+          <span class="new-price">Rs 999</span>
+        </div>
+
+        <a href="#buy" class="sticky-btn">Enroll Now</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const stickyOffer = document.getElementById("stickyOffer");
+
+    setTimeout(() => {
+      stickyOffer.classList.add("show");
+    }, 3000);
+  </script>
+  
+  <section class="video-reveal" id="videoSection">
+    <div class="video-sticky">
+      <div class="video-frame" id="videoFrame">
+        <div class="video-inner">
+          <div class="video-badge">Live Learning Preview</div>
+
+          <video id="heroVideo" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80">
+            <source src="video.mp4" type="video/mp4" />
+          </video>
+
+          <button class="video-sound-icon" id="videoToggle" aria-label="Toggle video sound">
+            <svg id="iconSoundOn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 5L6 9H3V15H6L11 19V5Z"></path>
+              <path d="M15.5 8.5C16.9 9.4 17.8 10.9 17.8 12.5C17.8 14.1 16.9 15.6 15.5 16.5"></path>
+              <path d="M18 6.5C20 7.9 21.2 10.1 21.2 12.5C21.2 14.9 20 17.1 18 18.5"></path>
+            </svg>
+
+            <svg id="iconSoundOff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <path d="M11 5L6 9H3V15H6L11 19V5Z"></path>
+              <path d="M22 9L16 15"></path>
+              <path d="M16 9L22 15"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="course-section" id="courseReveal">
+    <div class="container">
+      <div class="course-wrap">
+        <div class="course-image-box">
+          <img src="img1.jpg" alt="Digital Marketing Course">
+        </div>
+
+        <div class="course-content">
+          <h2>Master <span>Digital Marketing</span> The Right Way</h2>
+          <p>
+            Learn strategy, funnels, content, ads, and conversion thinking in one premium course
+            designed to help you grow with clarity, skill, and real execution confidence.
+          </p>
+          <a href="#buy" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const words = [
+      "Actually Converts",
+      "Builds Real Brands",
+      "Serious Growth",
+      "Clean & Premium"
+    ];
+
+    const typedText = document.getElementById("typed-text");
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      typedText.textContent = currentWord.substring(0, charIndex);
+
+      if (!isDeleting) {
+        charIndex++;
+        if (charIndex > currentWord.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1200);
+          return;
+        }
+      } else {
+        charIndex--;
+        if (charIndex < 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          charIndex = 0;
+        }
+      }
+
+      setTimeout(typeEffect, isDeleting ? 45 : 85);
+    }
+
+    typeEffect();
+
+    const videoFrame = document.getElementById("videoFrame");
+    const videoSection = document.getElementById("videoSection");
+    const heroVideo = document.getElementById("heroVideo");
+    const videoToggle = document.getElementById("videoToggle");
+    const iconSoundOn = document.getElementById("iconSoundOn");
+    const iconSoundOff = document.getElementById("iconSoundOff");
+    const courseReveal = document.getElementById("courseReveal");
+    const watchBtn = document.getElementById("watchBtn");
+
+    let forcedExpand = false;
+
+    function updateVideoState() {
+      const rect = videoSection.getBoundingClientRect();
+      const totalScroll = Math.max(videoSection.offsetHeight - window.innerHeight, 1);
+      const currentScroll = Math.min(Math.max(-rect.top, 0), totalScroll);
+      let progress = currentScroll / totalScroll;
+
+      progress = Math.min(progress * 3.2, 1);
+
+      const width = 62 + (progress * 18);
+
+      if (!forcedExpand) {
+        videoFrame.style.width = width + "%";
+        videoFrame.style.borderRadius = (34 - progress * 14) + "px";
+        videoFrame.style.transform = `translateY(${12 - progress * 12}px)`;
+      }
+
+      if (progress > 0.82 || forcedExpand) {
+        courseReveal.classList.add("visible");
+      } else {
+        courseReveal.classList.remove("visible");
+      }
+    }
+
+    window.addEventListener("scroll", updateVideoState, { passive: true });
+    window.addEventListener("load", updateVideoState);
+
+    watchBtn.addEventListener("click", () => {
+      forcedExpand = true;
+      videoFrame.classList.add("expanded");
+      courseReveal.classList.add("visible");
+    });
+
+    videoToggle.addEventListener("click", async () => {
+      try {
+        if (heroVideo.muted) {
+          heroVideo.muted = false;
+          heroVideo.volume = 1;
+          await heroVideo.play();
+          iconSoundOn.style.display = "none";
+          iconSoundOff.style.display = "block";
+        } else {
+          heroVideo.muted = true;
+          iconSoundOn.style.display = "block";
+          iconSoundOff.style.display = "none";
+        }
+      } catch (error) {
+        console.log("Audio toggle blocked:", error);
+      }
+    });
+  </script>
+  </div>
+  <section class="problem-section" id="problem">
+    <div class="container">
+      <div class="problem-head">
+        <h2>Confusion Isn’t the <span>Problem</span></h2>
+        <p class="sub">
+          What you’re feeling is real. The issue is not your effort. The issue is the way
+          digital marketing is usually taught.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <div class="problem-box">
+          <div class="problem-label">What You're Experiencing</div>
+          <h3>Everything feels scattered</h3>
+          <p>You watch tutorials, but don’t know where to start.</p>
+          <p>You learn tools, but don’t know when to use them.</p>
+          <p>You copy strategies, but they don’t work for you.</p>
+          <p>And slowly, things start feeling unclear.</p>
+        </div>
+
+        <div class="problem-box featured">
+          <div class="problem-label">What's Actually Wrong</div>
+          <h3>The system is broken</h3>
+          <p>Most people don’t fail because marketing is hard.</p>
+          <p>They fail because it’s taught in a broken way.</p>
+          <p>No structure.</p>
+          <p>No clarity.</p>
+          <p>No real understanding.</p>
+        </div>
+      </div>
+
+     <div class="problem-cta-wrap">
+  <a href="#join" class="problem-cta-btn">
+    <span class="cta-text">Join The Real World</span>
+    <span class="cta-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 12h11"></path>
+        <path d="M13 6l6 6-6 6"></path>
+      </svg>
+    </span>
+  </a>
+</div>
+    </div>
+  </section>
+
+   <section class="thinking-section">
+    <div class="container">
+      <div class="thinking-shell" id="thinkingReveal">
+        <div class="thinking-grid">
+          <div class="thinking-content">
+            <div class="thinking-badge">A Better Way To Learn Marketing</div>
+
+            <h2>
+              This Is Not a <span class="gold">Course.</span><br>
+              This Is a Thinking System.
+            </h2>
+
+            <p class="thinking-body">
+              Instead of overwhelming you with tools, we break marketing into simple, logical systems.
+              So you can think clearly, act faster, and finally understand what actually works.
+            </p>
+
+            <ul class="thinking-points">
+              <li>Understand why people buy</li>
+              <li>Build strategies instead of copying</li>
+              <li>Create content that actually works</li>
+              <li>Execute confidently without confusion</li>
+            </ul>
+
+            <div class="thinking-core">
+              <strong>Once you understand the system, tools become easy.</strong>
+            </div>
+
+            <a href="#join" class="thinking-btn">Join The Real World</a>
+          </div>
+
+          <div class="thinking-visual">
+            <div class="rock left"></div>
+            <div class="rock mid"></div>
+            <div class="rock right"></div>
+
+            <div class="phone-wrap">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img src="img2.jpg" alt="Thinking system preview" width="100%" height="100%">
+                <div class="screen-overlay"></div>
+                <div class="screen-ui">
+                  <small>System-Based Learning</small>
+                  <h4>Learn the logic behind every move</h4>
+                  <p>
+                    Strategy first. Tools second. When the system is clear, execution gets easier.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const thinkingReveal = document.getElementById("thinkingReveal");
+
+    function revealSection() {
+      const rect = thinkingReveal.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 80) {
+        thinkingReveal.classList.add("active");
+      }
+    }
+
+    window.addEventListener("load", revealSection);
+    window.addEventListener("scroll", revealSection, { passive: true });
+  </script>
+
+  <div class="body1">
+     <section class="section" id="system">
+    <div class="container">
+      <span class="kicker">Premium Learning Blueprint</span>
+      <h2>Master The <span>Real Digital Growth System</span></h2>
+      <p class="sub">
+        A premium landing page section where each card flows into the next, with the center card fully visible and the side cards softly layered in the background.
+      </p>
+
+      <div class="slider-shell">
+        <article class="card left" id="leftCard"></article>
+        <article class="card center" id="centerCard"></article>
+        <article class="card right" id="rightCard"></article>
+      </div>
+
+      <div class="cta-wrap">
+        <a href="#join" class="btn">Join The Real World</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function svgToDataUri(svg) {
+      return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+    }
+
+    const iconAudience = svgToDataUri(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6c7"/>
+            <stop offset="100%" stop-color="#ffcc00"/>
+          </linearGradient>
+        </defs>
+        <circle cx="70" cy="70" r="56" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+        <circle cx="70" cy="48" r="13" fill="none" stroke="url(#g1)" stroke-width="5"/>
+        <path d="M44 95c5-13 16-21 26-21s21 8 26 21" fill="none" stroke="url(#g1)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="40" cy="56" r="8" fill="none" stroke="#ffffff" stroke-width="4"/>
+        <circle cx="100" cy="56" r="8" fill="none" stroke="#ffffff" stroke-width="4"/>
+      </svg>
+    `);
+
+    const iconContent = svgToDataUri(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+        <defs>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6c7"/>
+            <stop offset="100%" stop-color="#ffcc00"/>
+          </linearGradient>
+        </defs>
+        <rect x="28" y="26" width="84" height="88" rx="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.16)" stroke-width="2"/>
+        <path d="M46 52h48M46 68h48M46 84h30" stroke="url(#g2)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M88 32l12 12" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    `);
+
+    const iconFunnel = svgToDataUri(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+        <defs>
+          <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6c7"/>
+            <stop offset="100%" stop-color="#ffcc00"/>
+          </linearGradient>
+        </defs>
+        <path d="M28 36h84l-28 32v20L56 106V68L28 36z" fill="rgba(255,255,255,0.08)" stroke="url(#g3)" stroke-width="5" stroke-linejoin="round"/>
+        <circle cx="70" cy="103" r="7" fill="none" stroke="#ffffff" stroke-width="4"/>
+      </svg>
+    `);
+
+    const iconLanding = svgToDataUri(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+        <defs>
+          <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6c7"/>
+            <stop offset="100%" stop-color="#ffcc00"/>
+          </linearGradient>
+        </defs>
+        <rect x="24" y="30" width="92" height="72" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+        <path d="M40 50h60M40 66h38M40 82h24" stroke="url(#g4)" stroke-width="5" stroke-linecap="round"/>
+        <rect x="82" y="76" width="18" height="10" rx="5" fill="none" stroke="#ffffff" stroke-width="4"/>
+      </svg>
+    `);
+
+    const iconAds = svgToDataUri(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+        <defs>
+          <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6c7"/>
+            <stop offset="100%" stop-color="#ffcc00"/>
+          </linearGradient>
+        </defs>
+        <path d="M38 88V52l38-12v60L38 88z" fill="rgba(255,255,255,0.08)" stroke="url(#g5)" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M76 56c8 4 12 10 12 14s-4 10-12 14" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+        <path d="M88 44c12 7 18 16 18 26s-6 19-18 26" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    `);
+
+    const iconExecution = svgToDataUri(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+        <defs>
+          <linearGradient id="g6" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6c7"/>
+            <stop offset="100%" stop-color="#ffcc00"/>
+          </linearGradient>
+        </defs>
+        <path d="M38 48h34M38 70h52M38 92h28" stroke="url(#g6)" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="92" cy="48" r="8" fill="none" stroke="#ffffff" stroke-width="4"/>
+        <circle cx="72" cy="92" r="8" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="4"/>
+      </svg>
+    `);
+
+    const slides = [
+      {
+        title: "Market & Audience Thinking",
+        desc: "Understand how Indian users notice, compare, trust, and finally buy.",
+        visual: "v1",
+        image: iconAudience
+      },
+      {
+        title: "Content Psychology",
+        desc: "Learn why some content creates attention and trust while most gets ignored.",
+        visual: "v2",
+        image: iconContent
+      },
+      {
+        title: "Funnel Understanding",
+        desc: "Map the full journey from attention to interest, trust, and conversion.",
+        visual: "v3",
+        image: iconFunnel
+      },
+      {
+        title: "Landing Page Logic",
+        desc: "See how page structure, offer flow, and copy work together to convert.",
+        visual: "v4",
+        image: iconLanding
+      },
+      {
+        title: "Paid Ads Thinking",
+        desc: "Know when to scale with ads, what to test, and why performance changes.",
+        visual: "v5",
+        image: iconAds
+      },
+      {
+        title: "Execution Framework",
+        desc: "Turn strategy into repeatable campaigns that move from idea to launch fast.",
+        visual: "v6",
+        image: iconExecution
+      }
+    ];
+
+    const leftCard = document.getElementById("leftCard");
+    const centerCard = document.getElementById("centerCard");
+    const rightCard = document.getElementById("rightCard");
+
+    let current = 0;
+    let locked = false;
+
+    function renderCard(el, item) {
+      el.innerHTML = `
+        <div class="visual ${item.visual}">
+          <img src="${item.image}" alt="${item.title}">
+        </div>
+        <div class="card-content">
+          <h3>${item.title}</h3>
+          <p>${item.desc}</p>
+        </div>
+      `;
+    }
+
+    function paint() {
+      const prev = (current - 1 + slides.length) % slides.length;
+      const next = (current + 1) % slides.length;
+
+      renderCard(leftCard, slides[prev]);
+      renderCard(centerCard, slides[current]);
+      renderCard(rightCard, slides[next]);
+
+      leftCard.className = "card left";
+      centerCard.className = "card center";
+      rightCard.className = "card right";
+    }
+
+    function nextSlide() {
+      if (locked) return;
+      locked = true;
+
+      leftCard.className = "card hidden-left";
+      centerCard.className = "card left";
+      rightCard.className = "card center";
+
+      const incoming = document.createElement("article");
+      incoming.className = "card hidden-right";
+      const nextIndex = (current + 2) % slides.length;
+      renderCard(incoming, slides[nextIndex]);
+      document.querySelector(".slider-shell").appendChild(incoming);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          incoming.className = "card right";
+        });
+      });
+
+      setTimeout(() => {
+        current = (current + 1) % slides.length;
+        incoming.remove();
+        paint();
+        locked = false;
+      }, 820);
+    }
+
+    paint();
+    setInterval(nextSlide, 2400);
+  </script>
+
+  <!-- .. -->
+   <section class="vdc-curriculum-section" id="vdc-curriculum">
+    <div class="vdc-curriculum-container">
+      <!-- <span class="vdc-curriculum-kicker">Step By Step Curriculum</span> -->
+      <h2 class="vdc-curriculum-heading">What You’ll Actually Learn <span>(Step-by-Step)</span></h2>
+      <p class="vdc-curriculum-subtext">
+        A clean structured curriculum that builds skills phase by phase.
+      </p>
+
+      <div class="vdc-curriculum-grid">
+        <article class="vdc-curriculum-box">
+          <div class="vdc-curriculum-particles">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="vdc-curriculum-content">
+            <div class="vdc-curriculum-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M18 22h28"></path>
+                <path d="M18 32h20"></path>
+                <path d="M18 42h14"></path>
+                <circle cx="46" cy="22" r="6"></circle>
+              </svg>
+            </div>
+            <h3 class="vdc-curriculum-title">Phase 1: Foundation Clarity</h3>
+            <ul class="vdc-curriculum-list">
+              <li>What is real marketing</li>
+              <li>Myths vs reality</li>
+              <li>Indian vs global behavior</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="vdc-curriculum-box">
+          <div class="vdc-curriculum-particles">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="vdc-curriculum-content">
+            <div class="vdc-curriculum-icon">
+              <svg viewBox="0 0 64 64">
+                <rect x="16" y="16" width="32" height="32" rx="8"></rect>
+                <path d="M24 26h16"></path>
+                <path d="M24 34h16"></path>
+                <path d="M24 42h10"></path>
+              </svg>
+            </div>
+            <h3 class="vdc-curriculum-title">Phase 2: Content Mastery</h3>
+            <ul class="vdc-curriculum-list">
+              <li>Hooks that stop scrolling</li>
+              <li>Storytelling frameworks</li>
+              <li>Reels + ads structure</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="vdc-curriculum-box">
+          <div class="vdc-curriculum-particles">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="vdc-curriculum-content">
+            <div class="vdc-curriculum-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M14 18h36l-10 12v10l-12 8V30L14 18Z"></path>
+                <circle cx="32" cy="46" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="vdc-curriculum-title">Phase 3: Funnel &amp; Pages</h3>
+            <ul class="vdc-curriculum-list">
+              <li>Landing page frameworks</li>
+              <li>User journey mapping</li>
+              <li>Conversion thinking</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="vdc-curriculum-box">
+          <div class="vdc-curriculum-particles">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="vdc-curriculum-content">
+            <div class="vdc-curriculum-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M18 42V22l24-8v36l-24-8Z"></path>
+                <path d="M42 24c4 2 6 5.5 6 8s-2 6-6 8"></path>
+                <path d="M48 18c5 3 8 8 8 14s-3 11-8 14"></path>
+              </svg>
+            </div>
+            <h3 class="vdc-curriculum-title">Phase 4: Ads &amp; Scaling</h3>
+            <ul class="vdc-curriculum-list">
+              <li>Meta ads logic</li>
+              <li>Budget thinking</li>
+              <li>Testing strategies</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="vdc-curriculum-box vdc-curriculum-box-wide">
+          <div class="vdc-curriculum-particles">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="vdc-curriculum-content">
+            <div class="vdc-curriculum-icon">
+              <svg viewBox="0 0 64 64">
+                <path d="M18 20h16"></path>
+                <path d="M18 32h28"></path>
+                <path d="M18 44h20"></path>
+                <circle cx="42" cy="20" r="5"></circle>
+                <circle cx="28" cy="44" r="5"></circle>
+              </svg>
+            </div>
+            <h3 class="vdc-curriculum-title">Phase 5: Real Execution</h3>
+            <ul class="vdc-curriculum-list">
+              <li>Build live campaigns</li>
+              <li>Analyze performance</li>
+              <li>Improve &amp; scale</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const vdcCurriculumBoxes = document.querySelectorAll(".vdc-curriculum-box");
+
+    const vdcCurriculumObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }, index * 140);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    vdcCurriculumBoxes.forEach((box) => {
+      vdcCurriculumObserver.observe(box);
+    });
+  </script>
+  </div>
+  <!-- section -->
+   <section class="vdd-difference-section" id="vdd-difference">
+    <div class="vdd-difference-container">
+      <span class="vdd-difference-kicker">Two Paths Forward</span>
+
+      <h2 class="vdd-difference-heading">
+        <span class="line-one">Why This Feels</span>
+        <span class="line-two">Different From Every Other Course</span>
+      </h2>
+
+
+      <div class="vdd-difference-grid">
+        <article class="vdd-difference-card vdd-difference-left">
+          <div class="vdd-difference-overlay"></div>
+          <div class="vdd-difference-content">
+            <h3 class="vdd-difference-card-title">Typical Courses</h3>
+            <div class="vdd-difference-line"></div>
+
+            <ul class="vdd-difference-list">
+              <li>Random videos</li>
+              <li>Tool-focused</li>
+              <li>No structure</li>
+              <li>No execution</li>
+              <li>Foreign examples</li>
+            </ul>
+
+            <a href="#" class="vdd-difference-btn vdd-difference-btn-muted">Do It Their Way</a>
+          </div>
+        </article>
+
+        <div class="vdd-difference-vs-wrap">
+          <div class="vdd-difference-vs"><span>VS</span></div>
+        </div>
+
+        <article class="vdd-difference-card vdd-difference-right">
+          <div class="vdd-difference-overlay"></div>
+          <div class="vdd-difference-content">
+            <h3 class="vdd-difference-card-title vdd-difference-card-title-brand">Vande Digital Academy</h3>
+            <div class="vdd-difference-line"></div>
+
+            <ul class="vdd-difference-list">
+              <li>Clear system</li>
+              <li>Thinking-first approach</li>
+              <li>India-focused</li>
+              <li>Real execution</li>
+              <li>Long-term skill building</li>
+            </ul>
+
+            <a href="#join" class="vdd-difference-btn vdd-difference-btn-gold">Join Vande Digital</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const vddDifferenceItems = document.querySelectorAll(".vdd-difference-card, .vdd-difference-vs-wrap");
+
+      const vddDifferenceObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }, index * 140);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      vddDifferenceItems.forEach((item) => {
+        vddDifferenceObserver.observe(item);
+      });
+    });
+  </script>
+  <!-- ... -->
+  <div class="body1">
+    <section class="vdo-offer-section" id="offer">
+    <div class="vdo-offer-container">
+      <div class="vdo-offer-box" id="vdoOfferBox">
+        <div class="vdo-offer-glow"></div>
+
+        <!-- <span class="vdo-offer-kicker vdo-animate">Section 9: Offer</span> -->
+
+        <h2 class="vdo-offer-heading vdo-animate">
+          Everything You Need
+          <span>In One System</span>
+        </h2>
+
+        <!-- <p class="vdo-offer-subtext vdo-animate">
+          A complete premium learning experience designed to give you clarity, execution, and long-term growth.
+        </p> -->
+
+        <div class="vdo-offer-list">
+          <div class="vdo-offer-item vdo-animate">Complete Digital Marketing Program</div>
+          <div class="vdo-offer-item vdo-animate">Lifetime Access</div>
+          <div class="vdo-offer-item vdo-animate">Future Updates</div>
+          <div class="vdo-offer-item vdo-animate">Community</div>
+        </div>
+
+        <div class="vdo-offer-cta-wrap vdo-animate">
+          <a href="#join" class="vdo-offer-btn">Enroll Now</a>
+          <p class="vdo-offer-urgency">
+            Start now. Don’t stay stuck for another 6 months.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const offerBox = document.getElementById("vdoOfferBox");
+      const animatedItems = document.querySelectorAll(".vdo-animate");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animatedItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add("vdo-show");
+              }, 120 * index);
+            });
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(offerBox);
+
+      offerBox.addEventListener("mousemove", (e) => {
+        const rect = offerBox.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateX = ((y / rect.height) - 0.5) * -6;
+        const rotateY = ((x / rect.width) - 0.5) * 6;
+
+        offerBox.style.setProperty("--mx", `${x}px`);
+        offerBox.style.setProperty("--my", `${y}px`);
+        offerBox.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+
+      offerBox.addEventListener("mouseleave", () => {
+        offerBox.style.transform = "perspective(1200px) rotateX(0deg) rotateY(0deg)";
+        offerBox.style.setProperty("--mx", "50%");
+        offerBox.style.setProperty("--my", "50%");
+      });
+
+      const offerBtn = document.querySelector(".vdo-offer-btn");
+      offerBtn.addEventListener("mouseenter", () => {
+        offerBtn.style.transform = "translateY(-4px) scale(1.03)";
+      });
+      offerBtn.addEventListener("mouseleave", () => {
+        offerBtn.style.transform = "";
+      });
+    });
+  </script>
+
+  <!-- FAQ -->
+
+   <section class="vdf-faq-section" id="faq">
+    <div class="vdf-faq-container">
+      <span class="vdf-faq-kicker">Frequently Asked Questions</span>
+
+      <h2 class="vdf-faq-heading">
+        Answers Before You
+        <span>Get Started</span>
+      </h2>
+
+      <p class="vdf-faq-subtext">
+        Everything you need to know before joining, explained in a clean and premium way.
+      </p>
+
+      <div class="vdf-faq-list">
+        <div class="vdf-faq-item vdf-open">
+          <button class="vdf-faq-question" type="button">
+            Is this beginner friendly?
+          </button>
+          <div class="vdf-faq-answer-wrap">
+            <div class="vdf-faq-answer-inner">
+              <div class="vdf-faq-answer">
+                <strong>Yes</strong> — starts from basics and builds step-by-step.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vdf-faq-item">
+          <button class="vdf-faq-question" type="button">
+            Is this only theory?
+          </button>
+          <div class="vdf-faq-answer-wrap">
+            <div class="vdf-faq-answer-inner">
+              <div class="vdf-faq-answer">
+                <strong>No</strong> — focused on execution and real application.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vdf-faq-item">
+          <button class="vdf-faq-question" type="button">
+            Do I need tools knowledge?
+          </button>
+          <div class="vdf-faq-answer-wrap">
+            <div class="vdf-faq-answer-inner">
+              <div class="vdf-faq-answer">
+                <strong>No</strong> — tools are taught inside the system.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vdf-faq-item">
+          <button class="vdf-faq-question" type="button">
+            Is this India-focused?
+          </button>
+          <div class="vdf-faq-answer-wrap">
+            <div class="vdf-faq-answer-inner">
+              <div class="vdf-faq-answer">
+                <strong>Yes</strong> — fully aligned with Indian audience behavior.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faqItems = document.querySelectorAll(".vdf-faq-item");
+
+      faqItems.forEach((item) => {
+        const button = item.querySelector(".vdf-faq-question");
+
+        button.addEventListener("click", () => {
+          const isOpen = item.classList.contains("vdf-open");
+
+          faqItems.forEach((faq) => faq.classList.remove("vdf-open"));
+
+          if (!isOpen) {
+            item.classList.add("vdf-open");
+          }
+        });
+      });
+    });
+  </script>
+    
+
+  </div>
+  
+</body>
+</html>
