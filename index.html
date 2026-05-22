@@ -417,11 +417,7 @@
         A premium landing page section where each card flows into the next, with the center card fully visible and the side cards softly layered in the background.
       </p>
 
-      <div class="slider-shell">
-        <article class="card left" id="leftCard"></article>
-        <article class="card center" id="centerCard"></article>
-        <article class="card right" id="rightCard"></article>
-      </div>
+      <div class="slider-shell" id="sliderShell"></div>
 
       <div class="cta-wrap">
         <a href="#join" class="btn">Join The Real World</a>
@@ -558,15 +554,12 @@
       }
     ];
 
-    const leftCard = document.getElementById("leftCard");
-    const centerCard = document.getElementById("centerCard");
-    const rightCard = document.getElementById("rightCard");
-
+    const sliderShell = document.getElementById("sliderShell");
     let current = 0;
-    let locked = false;
+    let isAnimating = false;
 
-    function renderCard(el, item) {
-      el.innerHTML = `
+    function renderCardContent(item) {
+      return `
         <div class="visual ${item.visual}">
           <img src="${item.image}" alt="${item.title}">
         </div>
@@ -577,51 +570,54 @@
       `;
     }
 
-    function paint() {
+    function createCard(item, className) {
+      const article = document.createElement("article");
+      article.className = `card ${className}`;
+      article.innerHTML = renderCardContent(item);
+      return article;
+    }
+
+    function setupCards() {
+      sliderShell.innerHTML = "";
+
       const prev = (current - 1 + slides.length) % slides.length;
       const next = (current + 1) % slides.length;
 
-      renderCard(leftCard, slides[prev]);
-      renderCard(centerCard, slides[current]);
-      renderCard(rightCard, slides[next]);
-
-      leftCard.className = "card left";
-      centerCard.className = "card center";
-      rightCard.className = "card right";
+      sliderShell.appendChild(createCard(slides[prev], "left"));
+      sliderShell.appendChild(createCard(slides[current], "center"));
+      sliderShell.appendChild(createCard(slides[next], "right"));
     }
 
     function nextSlide() {
-      if (locked) return;
-      locked = true;
+      if (isAnimating) return;
+      isAnimating = true;
 
-      leftCard.className = "card hidden-left";
-      centerCard.className = "card left";
-      rightCard.className = "card center";
+      const cards = sliderShell.querySelectorAll(".card");
+      const leftCard = cards[0];
+      const centerCard = cards[1];
+      const rightCard = cards[2];
+      const incomingIndex = (current + 2) % slides.length;
+      const incomingCard = createCard(slides[incomingIndex], "hidden-right");
 
-      const incoming = document.createElement("article");
-      incoming.className = "card hidden-right";
-      const nextIndex = (current + 2) % slides.length;
-      renderCard(incoming, slides[nextIndex]);
-      document.querySelector(".slider-shell").appendChild(incoming);
+      sliderShell.appendChild(incomingCard);
 
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          incoming.className = "card right";
-        });
+        leftCard.className = "card hidden-left";
+        centerCard.className = "card left";
+        rightCard.className = "card center";
+        incomingCard.className = "card right";
       });
 
       setTimeout(() => {
         current = (current + 1) % slides.length;
-        incoming.remove();
-        paint();
-        locked = false;
-      }, 820);
+        setupCards();
+        isAnimating = false;
+      }, 950);
     }
 
-    paint();
-    setInterval(nextSlide, 2400);
+    setupCards();
+    setInterval(nextSlide, 3200);
   </script>
-
   <!-- .. -->
    <section class="vdc-curriculum-section" id="vdc-curriculum">
     <div class="vdc-curriculum-container">
